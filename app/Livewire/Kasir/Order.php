@@ -7,6 +7,7 @@ use Livewire\Component;
 class Order extends Component
 {
     public $search;
+    public $type = 'order';
 
     public function render()
     {

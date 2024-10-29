@@ -11,9 +11,18 @@ class form.search extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public  $showTambahData = false;
+    public function __construct($type)
     {
-        //
+        switch ($type) {
+            case 'list':
+                $this->showTambahData = true;
+                break;
+
+            default:
+                $this->showTambahData = false;
+                break;
+        }
     }
 
     /**
