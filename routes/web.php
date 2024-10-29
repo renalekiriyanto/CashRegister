@@ -1,7 +1,8 @@
 <?php
 
 use App\Livewire\Kasir\Order;
-use App\Livewire\Product\Index;
+use App\Livewire\Product\Index as ListProduk;
+use App\Livewire\Product\Tambah as TambahProduk;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -11,7 +12,8 @@ Route::group(['prefix' => 'kasir', 'as' => 'kasir.'], function () {
     Route::get('/', Order::class)->name('order');
 });
 Route::group(['prefix' => 'produk', 'as' => 'produk.'], function(){
-    Route::get('/', Index::class) ->name('list');
+    Route::get('/', ListProduk::class) ->name('list');
+    Route::get('/tambah', TambahProduk::class)->name('tambah');
 });
 Route::middleware([
     'auth:sanctum',

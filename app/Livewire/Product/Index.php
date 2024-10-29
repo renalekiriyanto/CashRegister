@@ -13,4 +13,9 @@ class Index extends Component
     {
         return view('livewire.product.index');
     }
+
+    public function redirectPage()
+    {
+        dd('asd');
+    }
 }
